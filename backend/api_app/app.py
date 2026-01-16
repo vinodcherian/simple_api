@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from api_app.api import users, bugs, dashboard
 from api_app.core.db import init_db  # Import the database initialization function
 from fastapi.middleware.cors import CORSMiddleware
+from mangum import Mangum  # Import Mangum for AWS Lambda compatibility
 
 app = FastAPI(title="Bug tracking system API")
 
@@ -24,4 +25,6 @@ app.include_router(dashboard.router)
 def on_startup():
     init_db()  # Initialize the database tables on app startup
 
+# Add the Mangum handler for Vercel compatibility
+handler = Mangum(app)
 
