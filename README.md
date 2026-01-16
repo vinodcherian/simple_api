@@ -1,6 +1,6 @@
 # A Simple API
 ## Introduction
-This is a simple api app for Bug tracking using sqlite db with FASTAPI as backend and React as frontend. As this is a simple api so we can only CRUD operation for a bug incident such as Create, Edit and Delete. The Frontend app has a dashboard for bugs incident and also to create/edit/delete bugs incident. The backend app is a api. we can test the api's via `http://localhost:8000/docs/`.
+This is a simple api app for Bug tracking using sqlite db with FASTAPI as backend and React as frontend. As this is just a simple api so we can only do CRUD operation for a bug incident such as Create, Edit and Delete. The Frontend app has a dashboard for bugs incident and also to create/edit/delete bugs incident. The backend app is a apiand can test the api's via `http://localhost:8000/docs/`.
 
 ## Installation
 ### Frontend (React)
@@ -43,4 +43,5 @@ $uv run main.py
 
 
 #### Database (sqlite)
+
 This file db i.e. `backend\api_app_db.db` has some 50 sample records. No need for any installation for sqlite.
